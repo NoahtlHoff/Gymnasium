@@ -11,11 +11,9 @@ public partial class Student
 
     public string? LastName { get; set; }
 
-    public string? PersonalNumber { get; set; }
-
     public int? ClassId { get; set; }
 
     public virtual Class? Class { get; set; }
-
+    public DateTime DateOfBirth { get; set; }
     public virtual ICollection<Grade> Grades { get; set; } = new List<Grade>();
 }

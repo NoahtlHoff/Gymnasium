@@ -11,9 +11,11 @@ public partial class Staff
 
     public string? LastName { get; set; }
 
-    public string? Position { get; set; }
+    public string Role { get; set; }  // Use this field for "Teacher", "Admin", etc.
 
-    public string? PersonalNumber { get; set; }
+    public decimal Salary { get; set; } 
+    public DateTime StartDate { get; set; }
 
-    public virtual ICollection<Course> Courses { get; set; } = new List<Course>();
+    public DateTime DateOfBirth { get; set; }  
+    public virtual ICollection<Subject> Subjects { get; set; } = new List<Subject>();
 }
